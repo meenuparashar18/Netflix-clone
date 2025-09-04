@@ -306,3 +306,27 @@ footer .questions {
     flex-direction: column;
     gap: 23px;
 }
+/* Default: Desktop / Laptop */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards in a row */
+  gap: 20px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* 1 card in a row */
+  }
+
+  h1 {
+    font-size: 20px; /* small font for mobile */
+  }
+}
